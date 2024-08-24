@@ -1,7 +1,7 @@
 /* eslint-disable no-undef */
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
-import { Header } from "./Components/Header/Index";
+import { Header } from "./Components/Header";
 import "./globals.css";
 
 const inter = Inter({ subsets: ["latin"] });
