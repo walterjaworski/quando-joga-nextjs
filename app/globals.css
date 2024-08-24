@@ -28,3 +28,22 @@ body {
     text-wrap: balance;
   }
 }
+
+.data:before {
+  content: "\2022";
+  display: inline-block;
+  margin: 0 6px;
+  font-size: 12px;
+  line-height: 0;
+}
+
+h2 {
+  position: relative;
+}
+
+h2:before {
+  content: "";
+  position: absolute;
+  display: inline-block;
+  @apply w-1 h-7 top-1 -left-4 bg-red-600
+}
