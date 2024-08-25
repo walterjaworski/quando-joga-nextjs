@@ -19,9 +19,12 @@ export default function RootLayout({
   return (
     <html lang="pt-BR">
       <body className={inter.className}>
-        <Header.Root>
+        {/* <Header.Root>
           <Header.Logo />
           <Header.MenuRoot />
+        </Header.Root> */}
+        <Header.Root>
+          oi
         </Header.Root>
         {children}
       </body>
