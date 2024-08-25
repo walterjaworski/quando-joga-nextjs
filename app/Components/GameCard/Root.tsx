@@ -1,5 +1,6 @@
 import { leagueAliases, teamAliases } from "@/app/lib/aliases";
 import { formatDate, formatTime } from "@/app/lib/utils";
+import Image from "next/image";
 
 export default function GameCardRoot({
   game,
@@ -32,7 +33,7 @@ export default function GameCardRoot({
           <div className="grid grid-cols-[1fr_auto_1fr] justify-items-center items-center w-full">
             <div className="flex items-center justify-end w-full">
               <div className="flex gap-4 items-center">
-                <img src={game.teams.home.logo} alt={game.teams.home.name} className={game.teams.home.id === 134 ? "w-14" : "max-w-8 max-y-8"} />
+                <Image src={game.teams.home.logo} alt={game.teams.home.name} className={game.teams.home.id === 134 ? "w-14" : "max-w-8 max-y-8"} />
                 <span className={teamNameClasses(game.teams.home.winner)}>
                   {teamAliases[game.teams.home.name] || game.teams.home.name}
                 </span>
@@ -56,7 +57,7 @@ export default function GameCardRoot({
                 <span className={teamNameClasses(game.teams.away.winner)}>
                   {teamAliases[game.teams.away.name] || game.teams.away.name}
                 </span>
-                <img src={game.teams.away.logo} alt={game.teams.away.name} className={game.teams.away.id === 134 ? "w-14" : "max-w-8 max-y-8"} />
+                <Image src={game.teams.away.logo} alt={game.teams.away.name} className={game.teams.away.id === 134 ? "w-14" : "max-w-8 max-y-8"} />
               </div>
             </div>
           </div>
