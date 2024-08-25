@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { GameCard } from "./Components/GameCard";
+import { GameCard } from "./components/GameCard";
 import { fetchGames, getFilteredGames } from "./lib/api";
 
 export default function Home() {
