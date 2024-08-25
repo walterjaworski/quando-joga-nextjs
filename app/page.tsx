@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { GameCard } from "./components/GameCard";
+import { GameCardNew } from "./components/GameCardNew";
 import { fetchGames, getFilteredGames } from "./lib/api";
 
 export default function Home() {
@@ -27,13 +27,13 @@ export default function Home() {
     <main className="flex flex-col items-center justify-between px-24 py-12">
       <h2 className="text-3xl font-medium text-left w-full mb-12">Próximo Jogo</h2>
       {nextGame ? (
-        <GameCard.Root game={nextGame} />
+        <GameCardNew.Root game={nextGame} />
       ) : (
         <p className="font-thin">Não há próximo jogo.</p>
       )}
       <h2 className="text-3xl font-medium text-left w-full my-12">Jogo Anterior</h2>
       {previousGame ? (
-        <GameCard.Root game={previousGame} />
+        <GameCardNew.Root game={previousGame} />
       ) : (
         <p className="font-thin">Não há jogo anterior.</p>
       )}
